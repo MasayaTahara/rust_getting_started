@@ -1,0 +1,9 @@
+[package]
+name = "vector-func_5-3"
+version = "0.1.0"
+authors = ["MasayaTahara <mocoso.0u1@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
