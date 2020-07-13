@@ -1,21 +1,19 @@
-use english_numbers::convert_all_fmt;
+fn same_u8(a: u8, b: u8) -> String {
+    if a == b {
+        "Yes".to_string()
+    } else {
+        "No".to_string()
+    }
+}
 
 fn main() {
-    // Q. english-numbersという、i64の値を英語の文字列に変換してくれるcrateがあります。
-    // まずはCargo.tomlのDependenciesに
-    // english-numbers = "0.3"
-    // を追記して、このmain.rsを実行してみてください。
-    let val_i64 = 64;
-    println!("{}", convert_all_fmt(val_i64));
-    // Sixty-Four と表示されたでしょうか。
-    // この関数 convert_all_fmt は便利ですが、i64の値しか引数として受け取れません。
-    // 新しく「convert_num_into_string」という関数を作成し、
-    // ジェネリクスを使って、引数として以下の数値を表すいろいろな型を受け取って英語に変換してください。
-    // ヒント: https://docs.rs/num-traits/0.2.8/num_traits/cast/trait.ToPrimitive.html
+    // 以下の関数 same_u8 を見てください。
+    let a: u8 = 1;
+    let b: u8 = 1;
+    println!("{}", same_u8(a, b));
+    // u8型の変数を2つ渡すと、それらが同じときに"Yes"、異なる時に"No"を返します。
+    // ですが、このままではusize型やi64型の変数は渡すことができません。
 
-    let val_i32: i32 = 32;
-    let val_isize: isize = 99;
-    let val_u32: u32 = 32;
-    let val_u64: u64 = 64;
-    let val_usize: usize = 99;
+    // Q. u64でも、isize型でも、文字列でも、
+    // same_u8関数と同様に2つの引数が同じであれば"Yes"、異なる場合に"No"を返す関数"same"を作ってください。
 }
